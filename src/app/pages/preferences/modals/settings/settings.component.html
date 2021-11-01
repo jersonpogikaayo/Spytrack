@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-buttons id="pref" slot="start" (click)="closeModal()" >
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Cancel</p>
+    </ion-buttons>
+    <p style="width: 100%;" id="title">Filters</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Time Zone</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item detail button (click)="showPicker()">
+        <ion-label>
+          {{ selectedTimeZone }}
+          <br>
+          <p class="button-icons-desc">Select your time zone</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Map Style</ion-card-subtitle>
+      <p style="font-size: 12px;">Choose your map style</p>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-radio-group value="0">
+          <ion-item style="margin-bottom: 1em;">
+            <img src="../../../../assets/maps/dark.png"><ion-label>Dark</ion-label>
+            <ion-radio slot="start" value="0"></ion-radio>
+          </ion-item>
+          <ion-item style="margin-bottom: 1em;">
+            <img src="../../../../assets/maps/light.png"><ion-label>Light</ion-label>
+              <ion-radio slot="start" value="1"></ion-radio>
+          </ion-item>
+          <ion-item style="margin-bottom: 1em;">
+            <img src="../../../../assets/maps/satelite.png"><ion-label>Satelite</ion-label>
+              <ion-radio slot="start" value="2"></ion-radio>
+          </ion-item>
+          <ion-item style="margin-bottom: 1em;">
+            <img src="../../../../assets/maps/mono.png"><ion-label>Mono</ion-label>
+              <ion-radio slot="start" value="3"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Distance Units</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-radio-group value="0">
+          <ion-item style="margin-bottom: 1em;">
+            <ion-label>Feet</ion-label>
+            <ion-radio slot="start" value="0"></ion-radio>
+          </ion-item>
+          <ion-item style="margin-bottom: 1em;">
+            <ion-label>Kilometers</ion-label>
+              <ion-radio slot="start" value="1"></ion-radio>
+          </ion-item>
+          <ion-item style="margin-bottom: 1em;">
+            <ion-label>Meters</ion-label>
+              <ion-radio slot="start" value="2"></ion-radio>
+          </ion-item>
+          <ion-item style="margin-bottom: 1em;">
+            <ion-label>Miles</ion-label>
+              <ion-radio slot="start" value="3"></ion-radio>
+          </ion-item>
+          <ion-item style="margin-bottom: 1em;">
+            <ion-label>Yards</ion-label>
+              <ion-radio slot="start" value="4"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Distance Units</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-radio-group value="0">
+          <ion-item style="margin-bottom: 1em;">
+            <ion-label>km/h</ion-label>
+            <ion-radio slot="start" value="0"></ion-radio>
+          </ion-item>
+          <ion-item style="margin-bottom: 1em;">
+            <ion-label>mph</ion-label>
+              <ion-radio slot="start" value="1"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons id="pref" slot="start">
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Reset</p>
+    </ion-buttons>
+    <ion-button slot="end" color="dark">
+      Save Changes
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,182 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-buttons id="pref" slot="start" (click)="closeModal()" >
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Back</p>
+    </ion-buttons>
+    <p style="width: 100%;" id="title">Filters</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-card id="tracker-history-card">
+        <ion-card-header>
+          <ion-card-subtitle>Tracker History</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-radio-group [(value)]="defaultTrackerHistory">
+              <ion-item>
+                <ion-label><strong style="font-size: 18px;">No history, just trackers</strong><p style="font-size: 12px;">Hide tracker lines and alerts.<br>
+                Just show tracker icons where they are right now</p></ion-label>
+                <ion-radio slot="start" value="0" (ionFocus)="selectedHistory('0')"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><strong style="font-size: 18px;">Trackers and History</strong><p style="font-size: 12px;">Show tracker icons as well as map lines and alerts for a <br>
+                  specific time window</p></ion-label>
+                  <ion-radio slot="start" value="1" (ionFocus)="selectedHistory('1')"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+          <ion-grid *ngIf="defaultTrackerHistory == '1'">
+            <ion-row>
+              <p style="font-weight: bolder;">Select a time window to view recent activity</p>
+            </ion-row>
+            <ion-row>
+              <ion-radio-group>
+                <ion-item>
+                  <ion-label><p style="font-size: 12px;">Last Hour</p></ion-label>
+                  <ion-radio slot="start" value="1"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label><p style="font-size: 12px;">Last 8 Hours</p></ion-label>
+                  <ion-radio slot="start" value="8"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label><p style="font-size: 12px;">Last 12 Hours</p></ion-label>
+                  <ion-radio slot="start" value="12"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label><p style="font-size: 12px;">Last 24 Hours</p></ion-label>
+                  <ion-radio slot="start" value="24"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label><p style="font-size: 12px;">Today</p></ion-label>
+                  <ion-radio slot="start" value="today"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-row>
+            <br>
+            <ion-row>
+              <p style="font-weight: bolder;">Alerts</p>
+            </ion-row>
+            <ion-row>
+              <p>Select the alert types you want to visualize in the map</p>
+            </ion-row>
+            <ion-row>
+              <ion-list>
+                <ion-item>
+                  <ion-label class="alerts-label">Boundary Entry</ion-label>
+                  <ion-checkbox slot="start" value="0"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">Boundary Exit</ion-label>
+                    <ion-checkbox slot="start" value="1"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">Ignition Off</ion-label>
+                    <ion-checkbox slot="start" value="2"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">Ignition On</ion-label>
+                    <ion-checkbox slot="start" value="3"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">Low Battery</ion-label>
+                    <ion-checkbox slot="start" value="4"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">SOS</ion-label>
+                    <ion-checkbox slot="start" value="5"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">Speeding</ion-label>
+                    <ion-checkbox slot="start" value="6"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">Trip Finished</ion-label>
+                    <ion-checkbox slot="start" value="7"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">Trip Exceeds Distance</ion-label>
+                    <ion-checkbox slot="start" value="8"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">Trip Exceeds Duration</ion-label>
+                    <ion-checkbox slot="start" value="9"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="alerts-label">Trip Started</ion-label>
+                    <ion-checkbox slot="start" value="10"></ion-checkbox>
+                </ion-item>
+            </ion-list>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+      <ion-card id="tracker-history-card">
+        <ion-card-header>
+          <ion-card-subtitle>Map Overlays</ion-card-subtitle>
+          <p style="font-size: 12px;">Augment your experience with rich map overlays</p>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+              <ion-item>
+                <ion-label><ion-icon name="remove-circle-outline"></ion-icon>Boundaries</ion-label>
+                <ion-checkbox slot="start" value="0"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label><ion-icon name="car-sport-outline"></ion-icon>Traffic</ion-label>
+                  <ion-checkbox slot="start" value="1"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label> <ion-icon name="cloud-outline"></ion-icon> Weather</ion-label>
+                  <ion-checkbox slot="start" value="2"></ion-checkbox>
+              </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card id="tracker-history-card">
+        <ion-card-header>
+          <ion-card-subtitle>Map Style</ion-card-subtitle>
+          <p style="font-size: 12px;">Choose your map style</p>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-radio-group value="0">
+              <ion-item style="margin-bottom: 1em;">
+                <img src="../../../../assets/maps/dark.png"><ion-label>Dark</ion-label>
+                <ion-radio slot="start" value="0"></ion-radio>
+              </ion-item>
+              <ion-item style="margin-bottom: 1em;">
+                <img src="../../../../assets/maps/light.png"><ion-label>Light</ion-label>
+                  <ion-radio slot="start" value="1"></ion-radio>
+              </ion-item>
+              <ion-item style="margin-bottom: 1em;">
+                <img src="../../../../assets/maps/satelite.png"><ion-label>Satelite</ion-label>
+                  <ion-radio slot="start" value="2"></ion-radio>
+              </ion-item>
+              <ion-item style="margin-bottom: 1em;">
+                <img src="../../../../assets/maps/mono.png"><ion-label>Mono</ion-label>
+                  <ion-radio slot="start" value="3"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons id="pref" slot="start">
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Reset</p>
+    </ion-buttons>
+    <ion-button slot="end" color="dark">
+      Apply filters
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

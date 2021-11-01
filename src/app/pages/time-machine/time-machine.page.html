@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><strong>Time Machine</strong></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      <ion-card-title>Date Range</ion-card-title>
+      <p>Select the date range to when you want to travel back in time</p>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-row>
+          <ion-datetime placeholder="Select Date" display-timezone="utc" id="date-selection">
+          </ion-datetime>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-datetime displayFormat="h:mm a" placeholder="Select Start Time" id="date-selection"></ion-datetime>
+        </ion-col>
+        <ion-col>
+          <ion-datetime displayFormat="h:mm a" placeholder="Select End Time" id="date-selection"></ion-datetime>
+        </ion-col>
+      </ion-row>
+      <br>
+      <br>
+      <br>
+      <ion-row>
+        <ion-button color="dark" expand="block" style="width: 100%;">Go back in time</ion-button>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

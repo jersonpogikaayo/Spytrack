@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Help</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card (click)="redirectChat()">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-icon name="chatbubble-outline"></ion-icon>
+      </ion-card-subtitle>
+      <ion-card-title>Chat with us</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Your quickest option to get live help.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="redirectMessage()" >
+    <ion-card-header>
+      <ion-card-subtitle><ion-icon name="mail-outline"></ion-icon></ion-card-subtitle>
+      <ion-card-title>Send us a message</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Fill out our contact form and we will follow up right away.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="redirectHelp()">
+    <ion-card-header>
+      <ion-card-subtitle><ion-icon name="information-circle-outline"></ion-icon></ion-card-subtitle>
+      <ion-card-title>Visit our Help Center</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+     Find answers to commonly asked questions.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,19 @@
+#welcome-message {
+    color: black;
+    text-align: center;
+}
+
+ion-item {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.active {
+    border-left: 5px solid;
+    color: #2EB3C2;
+    padding-left: 15px;
+
+    ion-icon {
+        color: #2EB3C2;
+    }
+}

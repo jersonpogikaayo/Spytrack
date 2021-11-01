@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-buttons id="pref" slot="start" (click)="closeModal()" >
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Cancel</p>
+    </ion-buttons>
+    <p style="width: 100%;" id="title">Filters</p>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-card>
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Sort By</ion-card-subtitle> -->
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-item class="input-details">
+              <ion-label position="floating">First Name</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">Last Name</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">Company Name</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">Username</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">Email</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">Password</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">Phone</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">Address</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">City</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">State</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">Zip Code</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="input-details">
+              <ion-label position="floating">Country</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons id="pref" slot="start">
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Reset</p>
+    </ion-buttons>
+    <ion-button slot="end" color="dark">
+      Update Account
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-buttons id="pref" slot="start" (click)="closeModal()" >
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Cancel</p>
+    </ion-buttons>
+    <p style="width: 100%;" id="title">Filters</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Sort By</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-radio-group [(value)]="defaultFilterSort">
+              <ion-item>
+                <ion-label><p>None</p></ion-label>
+                <ion-radio slot="start" value="None"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Type - Ascending</p></ion-label>
+                <ion-radio slot="start" value="typea"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Type - Descending</p></ion-label>
+                <ion-radio slot="start" value="typed"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Tracker - Ascending</p></ion-label>
+                <ion-radio slot="start" value="trackera"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Tracker - Descending</p></ion-label>
+                <ion-radio slot="start" value="trackerd"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Date - Ascending</p></ion-label>
+                <ion-radio slot="start" value="datea"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Date - Descending</p></ion-label>
+                <ion-radio slot="start" value="dated"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Location - Ascending</p></ion-label>
+                <ion-radio slot="start" value="locationa"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Location - Descending</p></ion-label>
+                <ion-radio slot="start" value="locationd"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Type</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-radio-group [(value)]="defaultFilterTpe">
+              <ion-item>
+                <ion-label class="alerts-label">None</ion-label>
+                <ion-radio slot="start" value="None"></ion-radio>
+              </ion-item><ion-item>
+                <ion-label class="alerts-label">Boundary Entry</ion-label>
+                <ion-radio slot="start" value="0"></ion-radio>
+              </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Boundary Entry</ion-label>
+              <ion-radio slot="start" value="0"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Boundary Exit</ion-label>
+                <ion-radio slot="start" value="1"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Ignition Off</ion-label>
+                <ion-radio slot="start" value="2"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Ignition On</ion-label>
+                <ion-radio slot="start" value="3"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Low Battery</ion-label>
+                <ion-radio slot="start" value="4"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">SOS</ion-label>
+                <ion-radio slot="start" value="5"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Speeding</ion-label>
+                <ion-radio slot="start" value="6"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Trip Finished</ion-label>
+                <ion-radio slot="start" value="7"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Trip Exceeds Distance</ion-label>
+                <ion-radio slot="start" value="8"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Trip Exceeds Duration</ion-label>
+                <ion-radio slot="start" value="9"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="alerts-label">Trip Started</ion-label>
+                <ion-radio slot="start" value="10"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Tracker</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-radio-group [(value)]="defaultFilterTracker">
+              <ion-item>
+                <ion-label><p>All</p></ion-label>
+                <ion-radio slot="start" value="All"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Tracker 1</p></ion-label>
+                  <ion-radio slot="start" value="tracker1"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Tracker 2</p></ion-label>
+                  <ion-radio slot="start" value="tracker2"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons id="pref" slot="start">
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Reset</p>
+    </ion-buttons>
+    <ion-button slot="end" color="dark">
+      Apply filters
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

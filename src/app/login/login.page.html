@@ -1,0 +1,25 @@
+<ion-content class="background">
+	<div class="title">
+         <h2 class="title-spy">
+            <img src="assets/icon/spytrack_logo.PNG" style="width: 250px;">
+        </h2>
+    </div>
+
+    <div id="container">
+      <ion-item id="rounded">
+        <ion-label position="floating">Username or Email</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item id="rounded">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <section class="ion-btn">
+        <ion-button type="submit" class="btn-login" expand="block" color="secondary"  (click)="login()">Login</ion-button>
+      </section>
+        <div class="list">
+            <p [routerLink]="['/registration']">New to Thorton?</p>
+            <p [routerLink]="['/login/forgot-password']">Forgot Password?</p>
+        </div>
+    </div>
+</ion-content>

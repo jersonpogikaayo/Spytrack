@@ -1,0 +1,26 @@
+#map {
+    height: 100%;
+}
+
+#pref {
+    font-size: 1.5em;
+    padding-right: 10px;
+}
+#wrapper {
+    position: relative;
+}
+#over_map { 
+    left: 10%;
+    right: 10%;
+    position: absolute;
+    z-index: 99;
+}
+
+#filterStatus {
+    font-size: 18px;
+    padding-right: 1em;
+}
+
+.new-background-color{
+    --background: #E7F7FA;
+}

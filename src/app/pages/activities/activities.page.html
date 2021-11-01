@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Activities</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons id="filter" slot="end" (click)="presentModal()">
+      <ion-icon name="settings"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <h4>No activities found</h4>
+    </ion-row>
+    <ion-row>
+      <ion-button color="dark" expand="block" style="width: 100%;" (click)="presentModal()">Change filter</ion-button>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

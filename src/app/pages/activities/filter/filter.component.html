@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-buttons id="pref" slot="start" (click)="closeModal()" >
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Cancel</p>
+    </ion-buttons>
+    <p style="width: 100%;" id="title">Filters</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Activity Type</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-radio-group [(value)]="defaultFilterType">
+              <ion-item>
+                <ion-label><p>All</p></ion-label>
+                <ion-radio slot="start" value="All"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Stop</p></ion-label>
+                  <ion-radio slot="start" value="Stop"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Trip</p></ion-label>
+                  <ion-radio slot="start" value="Trip"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Tracker</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-radio-group [(value)]="defaultFilterTracker">
+              <ion-item>
+                <ion-label><p>All</p></ion-label>
+                <ion-radio slot="start" value="All"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Tracker 1</p></ion-label>
+                  <ion-radio slot="start" value="tracker1"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><p>Tracker 2</p></ion-label>
+                  <ion-radio slot="start" value="tracker2"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+          <ion-row>
+            <ion-col>
+                <ion-datetime displayFormat="h:mm a" placeholder="From" id="date-selection"></ion-datetime>
+            </ion-col>
+            <ion-col>
+              <ion-datetime displayFormat="h:mm a" placeholder="To" id="date-selection"></ion-datetime>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons id="pref" slot="start">
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Reset</p>
+    </ion-buttons>
+    <ion-button slot="end" color="dark">
+      Apply filters
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

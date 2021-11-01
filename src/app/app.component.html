@@ -1,0 +1,64 @@
+<ion-app>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar>
+          <ion-card-header>
+            <ion-card-title><img src="assets/icon/spytrack_logo.PNG"></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+           <p id="welcome-message"><strong>Welcome, Ricardo</strong></p>
+          </ion-card-content>
+        <!-- <ion-title>
+          Menu
+        </ion-title> -->
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item [ngClass]="{'active' : activePage == 'live-tracking'}"  routerLink="live-tracking" (click)="selectedPage('live-tracking')">
+            <ion-icon name="navigate" slot="start"></ion-icon>
+              <ion-label>Live Tracking</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="time-machine" [ngClass]="{'active' : activePage == 'time-machine'}" (click)="selectedPage('time-machine')">
+            <ion-icon name="time" slot="start"></ion-icon>
+              <ion-label>Time Machine</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item ion-item routerLink="activities" [ngClass]="{'active' : activePage == 'activities'}" (click)="selectedPage('activities')">
+            <ion-icon name="heart" slot="start"></ion-icon>
+              <ion-label>Activities</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="alerts" [ngClass]="{'active' : activePage == 'alerts'}" (click)="selectedPage('alerts')">
+            <ion-icon name="notifications" slot="start"></ion-icon>
+              <ion-label>Alerts</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="preferences" [ngClass]="{'active' : activePage == 'preferences'}" (click)="selectedPage('preferences')">
+            <ion-icon name="settings" slot="start"></ion-icon>
+              <ion-label>Preferences</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="help" [ngClass]="{'active' : activePage == 'help'}" (click)="selectedPage('help')">
+            <ion-icon name="warning" slot="start"></ion-icon>
+              <ion-label>Help</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="help" [ngClass]="{'active' : activePage == 'help'}" (click)="logout()">
+            <ion-icon name="power" slot="start"></ion-icon>
+              <ion-label style="color: red;">Sign Out</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

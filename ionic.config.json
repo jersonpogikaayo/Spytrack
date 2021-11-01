@@ -1,0 +1,7 @@
+{
+  "name": "spytrack",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

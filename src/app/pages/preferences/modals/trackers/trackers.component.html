@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-buttons id="pref" slot="start" (click)="closeModal()" >
+      <p style="color: black; font-size: 12px; padding-left: 1em;">Cancel</p>
+    </ion-buttons>
+    <p style="width: 100%;" id="title">Filters</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-text-center" id="over_map">
+    <ion-card-header>
+      <ion-card-title>Activate a Tracker</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Add a tracker to enjoy the full Spytrack GPS<br> experience.
+      <br>
+      <br>
+      <ion-grid>
+        <ion-row>
+          <ion-col (click)="redirectActivate()">
+            <p style="color: deepskyblue;
+            font-weight: 800;">Purchase a tracker</p>
+          </ion-col>
+          <ion-col (click)="redirectActivate()">
+            <p style="color: darkgreen;
+            font-weight: 800;">Activate a tracker</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
